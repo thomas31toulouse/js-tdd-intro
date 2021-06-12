@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 String.prototype.toJadenCase = function () {
 
     function capitalizeFirstLetter(string) {
@@ -8,7 +10,6 @@ String.prototype.toJadenCase = function () {
     console.log('i love you');
   };
 
-const assert = require('assert');
 
 assert.strictEqual(typeof capitalizeFirstLetters, 'function');
 
