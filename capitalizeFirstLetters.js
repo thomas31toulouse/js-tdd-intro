@@ -7,13 +7,12 @@ String.prototype.toJadenCase = function () {
     }
     
     return this.split(' ').map(capitalizeFirstLetter).join(' ');
-    console.log('i love you');
   };
 
 
 assert.strictEqual(typeof capitalizeFirstLetters, 'function');
 
-assert.strictEqual(capitalizeFirst.length, 1);
+assert.strictEqual(capitalizeFirstLetters.length, 1);
 
 assert.strictEqual(capitalizeFirstLetters('javaScript is love'), 'JavaScript Is Love');
 
