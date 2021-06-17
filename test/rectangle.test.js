@@ -1,23 +1,23 @@
 const assert = require('assert');
-const rectangle = require('../rectangle');
+const Rectangle = require('../rectangle');
 
-// give the test suite a label using describe
-describe('rectangle', () => {
-  // give the test a label using it
-  it('is a function accepting one argument', () => {
-    assert.strictEqual(typeof rectangle, 'function');
-    assert.strictEqual(rectangle.length, 1);
+describe('Rectangle', () => {
+    it('isSquare should return true', () => {
+      const rectangle = new Rectangle(5, 5);
+      assert.strictEqual(rectangle.isSquare(), true);
+    });
+    it('isSquare should return false', () => {
+      const rectangle = new Rectangle(6, 5);
+      assert.strictEqual(rectangle.isSquare(), false);
+    });
+  
+    it('getArea should return the area', () => {
+      const rectangle = new Rectangle(13, 7);
+      assert.strictEqual(rectangle.getArea(), 91);
+    });
+  
+    it('getPerimeter should return the perimeter', () => {
+      const rectangle = new Rectangle(13, 7);
+      assert.strictEqual(rectangle.getPerimeter(), 40);
+    });
   });
-
-  it('transforms javaScript correctly', () => {
-    assert.strictEqual(rectangle('javaScript'), 'JavaScript');
-  });
-
-  it('works with a 1-character string', () => {
-    assert.strictEqual(rectangle('z'), 'Z');
-  });
-
-  it('works with an empty string', () => {
-    assert.strictEqual(rectangle(''), '');
-  });
-});

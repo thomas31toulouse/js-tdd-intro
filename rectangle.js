@@ -1,20 +1,22 @@
+const assert = require('assert');
+
 class Rectangle {
-    constructor(a, b) {
-      this.a = a;
-      this.b = b;
-    }
-  
-    isSquare() {
-  
-    }
-  
-    getArea() {
-  
-    }
-  
-    getPerimeter() {
-  
-    }
+  constructor(a, b) {
+    this.a = a;
+    this.b = b;
   }
-  
-  module.exports = Rectangle;
+
+  isSquare() {
+    return this.a === this.b ? true : false;
+  }
+
+  getArea() {
+    return this.a * this.b;
+  }
+
+  getPerimeter() {
+    return (this.a + this.b) * 2;
+  }
+}
+
+module.exports = Rectangle;
